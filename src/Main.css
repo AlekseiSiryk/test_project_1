@@ -1,0 +1,77 @@
+.main{
+    width: 700px;
+    text-align: left;
+    margin-right: 50px;
+    padding: 40px 0 0 0;
+    font-size: calc(10px + 1vh);
+}
+.main input[type=text], .main > textarea{
+    font-size: calc(14px + 1vh);
+    width: 100%;
+    border: 1px solid #eaeaea;
+    border-radius: 2px;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.main input:focus, .main > textarea:focus{
+    border: 1px solid cornflowerblue;
+    box-shadow: none;
+    outline: 0;
+}
+.main input::placeholder, .main > textarea::placeholder{
+    color: rgba(0,0,0,0.4);
+}
+.main textarea{
+    resize: none;
+    min-height: 250px;
+}
+.main a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+.main a:hover{
+    text-decoration: underline;
+}
+.main > label{
+    position: relative;
+}
+.main > label:first-of-type::before{
+    content: "*";
+    color: red;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+.main .langRadio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.main .langRadio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+.main .langRadio+label::before {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #adb5bd;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.main .langRadio:checked+label::before {
+    border-color: #0b76ef;
+    background-color: #0b76ef;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+}

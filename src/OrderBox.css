@@ -1,0 +1,15 @@
+.aside{
+    width: 250px;
+}
+.price{
+    padding: 150px 0 0 0;
+}
+.orderBtn{
+    width: 100%;
+    background-color: #1b5dab;
+    border-radius: 10px;
+    outline: 0;
+    color: white;
+    padding: 3px;
+    font-size: calc(10px + 1vh);
+}

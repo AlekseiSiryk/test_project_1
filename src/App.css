@@ -1,0 +1,66 @@
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  font-size: calc(10px + 1vh);
+}
+.header {
+  background-color: black;
+  display: flex;
+  min-height: 8vh;
+  max-height: 10vh;
+  min-width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(12px + 1vh);
+  color: white;
+}
+.header > .nav{
+  width: 1000px;
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+}
+.header > .nav a{
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+}
+.header > .nav a:hover{
+  text-decoration: underline;
+}
+.header > .nav a:last-child{
+  margin-left: auto;
+  background-color: cornflowerblue;
+  border-radius: 15px;
+}
+.header > .nav a:last-child:hover{
+  text-decoration: none;
+}
+.footer{
+  padding: 3vh 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.footer > .nav{
+  display: flex;
+   width: 1000px;
+  justify-content: left;
+}
+.footer > .nav > a{
+  word-spacing: 5px;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer > .nav > a:nth-of-type(2n) {
+  margin-left: 20px;
+}
+.footer > .nav > a:nth-of-type(3){
+  margin-left: auto;
+}
