@@ -5,7 +5,7 @@ const updatePrice = (textLength, lang, file) => {
     //const minCost = lang === 'en' ? 120 : 50;
     const minCost = 1000 * langCost * fileModifier;
     const price = textLength * langCost * fileModifier;
-    return price > minCost ? price : minCost;
+    return price > minCost ? Math.round(price * 100) / 100 : minCost;
 }
 const updateJobTime = (textLength, lang) => {
     if (lang === '' || textLength === 0) return '';
