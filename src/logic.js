@@ -15,7 +15,7 @@ const updateJobTime = (textLength, lang) => {
     return timeToComplete > 60 ? timeToComplete : 60;
 }
 
-const deadline = (timeToComplete, startDate = new Date()) => {
+const deadline = (timeToComplete, startDate = new Date(), test='') => {
     if (timeToComplete === '') return '';
     const isWeekend = (date) => date.getDay() === 0 || date.getDay() === 6;
     const getAnswer = (today = false) => {
@@ -24,7 +24,8 @@ const deadline = (timeToComplete, startDate = new Date()) => {
         let hours = jobEnd.getHours();
         if (minutes === 0) minutes = '00';
         else if (minutes < 30) minutes = 30;
-        else if (minutes > 30){ minutes = "00"; hours++;}
+        else if (minutes > 30){ minutes = "00"; hours++};
+        if (test === 'test') return jobEnd.toString();
         if (today) return `Виконаємо сьогодні до ${hours}:${minutes}`;
         return `Термін виконання: ${jobEnd.toLocaleDateString()} о ${hours}:${minutes}`;
     }

@@ -3,7 +3,6 @@ import './App.css';
 import {updatePrice, deadline, updateJobTime} from './logic';
 import Main from "./Main";
 import OrderBox from "./OrderBox";
-
 function App() {
     const [text, updateText] = useState('');
     const [lang, setLang] = useState('');
